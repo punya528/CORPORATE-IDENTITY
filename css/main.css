@@ -1,0 +1,58 @@
+body {
+  background-color: black;
+}
+
+#main {
+  background-color: white;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.orange {
+  color:#CC6633;
+  font-weight: bold;
+  
+}
+
+.url{
+  color:white;
+  opacity: 0.5;
+}
+
+.url:hover{
+  color:#CC6633;
+  font-weight: bold;
+}
+
+
+.fxScal{
+  transform: perspective(500px) scale3d(1, 1, 1) translateZ(100px);
+  -webkit-animation:fxScalDown 0.5s;
+
+}
+
+.fxScal:hover{
+  -webkit-animation:fxScalUp 0.5s;
+  transform: perspective(500px) scale3d(1.01, 1.01, 2) translateZ(100px);
+}
+
+
+@keyFrames fxScalUp{
+  0%{
+    transform: perspective(500px) scale3d(1, 1, 1) translateZ(100px);
+
+  }
+  100%{
+     transform: perspective(500px) scale3d(1.01, 1.01, 2) translateZ(100px);
+  }
+}
+
+@keyframes fxScalDown {
+  0%{
+    transform: perspective(500px) scale3d(1.01,1.01, 2) translateZ(100px);
+
+  }
+  100%{
+     transform: perspective(500px) scale3d(1, 1, 1) translateZ(100px);
+  }
+}
